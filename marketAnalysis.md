@@ -1,6 +1,8 @@
 ## NVIDIA
 Tech demo: https://www.nvidia.com/en-us/on-demand/session/gtcspring22-s43047/
 
+Note: https://developer.nvidia.com/rtx/path-tracing
+
 NVIDIA use the open source shading language [Slang](https://github.com/shader-slang/slang) for their development.
 
 ### Path Tracing Pipeline
@@ -11,7 +13,7 @@ Direction illumination for diffuse/glossy reflection
 using spation-temporal resampling based on [this paper](https://research.nvidia.com/sites/default/files/pubs/2020-07_Spatiotemporal-reservoir-resampling/ReSTIR.pdf).
 
 ### Denoising
-NVIDIA Teal-time Denoisers (NRD) library of spation-temporal denoising kernels.
+NVIDIA Real-time Denoisers (NRD) library of spation-temporal denoising kernels.
 
 NVIDIA Deep Learning Super Sampling (DLSS) applied at the end.
 
@@ -58,4 +60,4 @@ A Signed Distance Field (SDF) is used to represent the surface of a mesh.
 Lumen uses a number of caches to achieve real-time performance. While local lighting changes propagate quickly, global lighting changes, like disabling the Sun, can take multiple seconds to propagate. Thanks to https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine
 
 
-Note: https://developer.nvidia.com/rtx/path-tracing
+## Blender Eevee Next / Cycles
