@@ -59,5 +59,8 @@ A Signed Distance Field (SDF) is used to represent the surface of a mesh.
 ### Lighting Update Speed
 Lumen uses a number of caches to achieve real-time performance. While local lighting changes propagate quickly, global lighting changes, like disabling the Sun, can take multiple seconds to propagate. Thanks to https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine
 
+## Unreal Engine 5.5 MegaLights
+MegaLights uses stochastic sampling to render many shadow casting lights efficiently.
+
 
 ## Blender Eevee Next / Cycles
