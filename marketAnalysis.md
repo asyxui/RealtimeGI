@@ -63,4 +63,15 @@ Lumen uses a number of caches to achieve real-time performance. While local ligh
 MegaLights uses stochastic sampling to render many shadow casting lights efficiently.
 
 
+## Stochastic sampling
+[Stochastic Substitute Trees for Real-Time Global Illumination](https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Downloads/team_steinberger/Publications/SST.pdf)
+
+[Stochastic Lightcuts for Sampling Many Lights](http://www.cemyuksel.com/research/stochasticlightcuts/stochasticlightcuts_tvcg.pdf)
+
+[Lightcuts: A Scalable Approach to Illumination](https://www.graphics.cornell.edu/~bjw/lightcuts.pdf)
+
+
 ## Blender Eevee Next / Cycles
+Eevee Next, compared to Cycles, provides faster render times but less realism. Eevee Next is known for its real-time rendering capabilities, making it ideal for tasks that require quick feedback or animations with complex lighting and shaders. It provides fast previews and interactivity during the creative process, which can be beneficial for artists who need rapid iterations.
+
+On the other hand, Cycles is a ray-tracing engine that produces high-quality, photorealistic renders with accurate light interactions and global illumination. While it may be slower than Eevee Next for real-time previews, Cycles excels in creating final output for projects that demand top-notch visuals.
