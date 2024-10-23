@@ -75,3 +75,28 @@ MegaLights uses stochastic sampling to render many shadow casting lights efficie
 Eevee Next, compared to Cycles, provides faster render times but less realism. Eevee Next is known for its real-time rendering capabilities, making it ideal for tasks that require quick feedback or animations with complex lighting and shaders. It provides fast previews and interactivity during the creative process, which can be beneficial for artists who need rapid iterations.
 
 On the other hand, Cycles is a ray-tracing engine that produces high-quality, photorealistic renders with accurate light interactions and global illumination. While it may be slower than Eevee Next for real-time previews, Cycles excels in creating final output for projects that demand top-notch visuals.
+
+### Eevee Next Raytracing
+
+
+## SSAO
+
+Indirect lighting approximation by occlusion from surrounding geometry.
+
+[Learn OpenGL article](https://learnopengl.com/Advanced-Lighting/SSAO)
+
+Most modern implementation: Horizon-Based Ambient Occlusion Plus [HBAO+](https://developer.nvidia.com/rendering-technologies/horizon-based-ambient-occlusion-plus).
+
+HBAO+ generates higher quality SSAO by using a physically based algorithm that approximates an integral with depth buffering sampling. It is much faster than HBAO.
+
+## Shadow Mapping
+Generate a depth map, then render the scene as normal and use the generated depth map to calculate whether fragments are in shadow.
+
+[Learn OpenGL article](https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping)
+
+### Alternatives to Shadow Mapping
+[NVIDIA Hybrid Frustum Traced Shadows](https://developer.nvidia.com/rendering-technologies/horizon-based-ambient-occlusion-plus) creates shadows that are close to the quality of ones created by Ray Tracing, but at a fraction of the performance cost.
+
+[Virtual Shadow Maps](https://dev.epicgames.com/documentation/en-us/unreal-engine/virtual-shadow-maps-in-unreal-engine) is used in Unreal Engine 5's Lumen. Uses Shadow Map Ray Tracing for soft shadows. Works well with highly detailed Nanite geometry.
+
+
