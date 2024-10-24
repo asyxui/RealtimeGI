@@ -42,6 +42,8 @@ Every geometry is encapsulated by a bounding box. Ray traversal checks if the bo
 
 ## Unreal Engine Lumen
 
+[Lumen Presentation](https://advances.realtimerendering.com/s2022/SIGGRAPH2022-Advances-Lumen-Wright%20et%20al.pdf)
+
 ### Nanite Virtualized Geometry
 Nanite is Unreal Engine 5's virtualized geometry system which uses a new internal mesh format and rendering technology to render pixel scale detail and high object counts. It intelligently does work on only the detail that can be perceived and no more. Nanite's data format is also highly compressed, and supports fine-grained streaming with automatic level of detail. Thanks to https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-virtualized-geometry-in-unreal-engine
 
@@ -78,6 +80,17 @@ On the other hand, Cycles is a ray-tracing engine that produces high-quality, ph
 
 ### Eevee Next Raytracing
 
+Virtual Shadow Mapping like Lumen.
+
+The render engine can now use screen surface ray tracing for every BSDF shader in a scene. Done by generating a ray from each BSDF and finding their intersection with the scene individually.
+
+Methods:
+- Light Probe: Use light-probe spheres and planes to find scene intersection. This option has the lowest tracing cost but relies on manually placed light-probes.
+- Screen-Trace: Trace ray against the screen depth buffer. Fallback to light-probes if ray exits the view.
+
+Denoising: Spatial Reuse, Temporal Accumulation, Bilateral Filter.
+
+Fast GI Approximation is a fallback to the raytracing pipeline for BSDF using either Ambient Occlusion or Global Illumination.
 
 ## SSAO
 
