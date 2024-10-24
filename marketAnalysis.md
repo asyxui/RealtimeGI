@@ -108,7 +108,7 @@ Generate a depth map, then render the scene as normal and use the generated dept
 [Learn OpenGL article](https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping)
 
 ### Alternatives to Shadow Mapping
-[NVIDIA Hybrid Frustum Traced Shadows](https://developer.nvidia.com/rendering-technologies/horizon-based-ambient-occlusion-plus) creates shadows that are close to the quality of ones created by Ray Tracing, but at a fraction of the performance cost.
+[NVIDIA Hybrid Frustum Traced Shadows](https://www.nvidia.com/en-us/geforce/news/nvidia-hfts-hybrid-frustum-traced-shadows) creates shadows that are close to the quality of ones created by Ray Tracing, but at a fraction of the performance cost.
 
 [Virtual Shadow Maps](https://dev.epicgames.com/documentation/en-us/unreal-engine/virtual-shadow-maps-in-unreal-engine) is used in Unreal Engine 5's Lumen. Uses Shadow Map Ray Tracing for soft shadows. Works well with highly detailed Nanite geometry.
 
